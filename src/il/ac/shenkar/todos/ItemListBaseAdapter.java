@@ -51,11 +51,15 @@ public class ItemListBaseAdapter extends BaseAdapter {
 			holder.btn_item.setOnClickListener(new OnClickListener() {
 		
 				public void onClick(View v) {
-					
+					ItemDetails itemDetails = new ItemDetails();
+					itemDetails.setName(dB1.getItemDetails((Integer) v.getTag()).getName());
+					dB1.getEntry().open();
+					dB1.getEntry().deleteEntry(itemDetails);
+					dB1.getEntry().close();
 					dB1.delList((Integer) v.getTag());
 					notifyDataSetChanged();
 					
-					  Toast.makeText(context_, "You deleted: "+v.getTag() , Toast.LENGTH_LONG).show();
+				  Toast.makeText(context_, "You deleted: "+v.getTag() , Toast.LENGTH_LONG).show();
 					  
 				}
 			});

@@ -15,7 +15,6 @@ public class ListViewImagesActivity extends Activity {
 	private Button btnAdd;
 	private ListView lv1;
 	private ItemListBaseAdapter adapter; 
-	
 	static final int NEW_ACTIVITY = 100;
 	
 	/** Called when the activity is first created. */
@@ -24,11 +23,11 @@ public class ListViewImagesActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-    
+        dB1.updateListFromDB();
         btnAdd = (Button) findViewById(R.id.btAdd);
         lv1 = (ListView) findViewById(R.id.listV_main);
-       adapter= new ItemListBaseAdapter(ListViewImagesActivity.this, dB1.getList());
-       lv1.setAdapter(adapter);
+        adapter= new ItemListBaseAdapter(ListViewImagesActivity.this, dB1.getList());
+        lv1.setAdapter(adapter);
         
          btnAdd.setOnClickListener(new OnClickListener() {
 			
@@ -45,6 +44,9 @@ public class ListViewImagesActivity extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if(requestCode == NEW_ACTIVITY && resultCode == RESULT_OK){
 			String returnTask = data.getStringExtra("newMessage");
+			dB1.getEntry().open();
+			dB1.getEntry().createEntry(returnTask, returnTask);
+			dB1.getEntry().close();
 			dB1.addList(returnTask, returnTask);
 			adapter.notifyDataSetChanged();
 			
