@@ -1,5 +1,7 @@
-package il.ac.shenkar.todos;
+package il.ac.shenkar.todos.database;
 
+
+import il.ac.shenkar.todos.ItemDetails;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -130,11 +132,7 @@ public class DatabaseHandler {
 		ourDatabase.delete(DATABASE_TABLE, KEY_NAME + " = ?",
                 new String[] { itemDetails.getName() });
 	}
-	public void deleteTable() {
-		// TODO Auto-generated method stub
-		ourDatabase.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE);
-		
-	}
+	
 	
 }
    

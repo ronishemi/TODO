@@ -1,5 +1,7 @@
 package il.ac.shenkar.todos;
 
+import il.ac.shenkar.todos.database.DatabaseHandler;
+
 import java.util.ArrayList;
 
 import android.content.Context;
@@ -8,32 +10,28 @@ public class SingelDB {
 	
 	private static SingelDB singelDB =null;
 	private static ArrayList<ItemDetails> array = null;
-	private static ArrayList<ItemDetails> array1 = null;
 	private  Context _context;
 	private static DatabaseHandler entry=null;
 	
 	private SingelDB(Context context){
 		_context=context;
+		array = new ArrayList<ItemDetails>();
+		entry = new DatabaseHandler(context);
+		entry.open();
+		array =(ArrayList<ItemDetails>)entry.getAllItemDetails();
+		entry.close();
 	}
 	
 	
-	static SingelDB getDB(Context context){
+	static SingelDB getInstance(Context context){
 		if(singelDB==null){
-			array = new ArrayList<ItemDetails>();
 			singelDB=new SingelDB(context);
-			entry = new DatabaseHandler(context);
-			
 		}
 		return singelDB;
 	}
+	
 	public DatabaseHandler getEntry(){
 		return entry;
-	}
-	public void updateListFromDB(){
-		entry.open();
-		array1 =(ArrayList<ItemDetails>)entry.getAllItemDetails();
-		entry.close();
-		array = array1;
 	}
 	public  ArrayList<ItemDetails> getList() {
 		return array;

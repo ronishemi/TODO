@@ -25,7 +25,7 @@ public class ItemListBaseAdapter extends BaseAdapter {
 		itemDetailsrrayList = results;
 		l_Inflater = LayoutInflater.from(context);
 	}
-	public SingelDB dB1=SingelDB.getDB(context_);
+	public SingelDB dB1=SingelDB.getInstance(context_);
 	public int getCount() {
 		return itemDetailsrrayList.size();
 	}

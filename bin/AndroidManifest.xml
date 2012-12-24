@@ -5,12 +5,13 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="9" />
-
+	<uses-permission android:name="android.permission.VIBRATE"/>
     <application
         android:icon="@drawable/icon"
         android:label="@string/app_name" >
+        
         <activity
-            android:name=".ListViewImagesActivity"
+            android:name="il.ac.shenkar.todos.Todos"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +28,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
+        <receiver android:name="il.ac.shenkar.todos.BroadCast.ReminderBroadCastReceiver" >
+            <intent-filter>
+                <action android:name="il.ac.shenkar.todos.BroadCast" >
+                </action>
+            </intent-filter>
+        </receiver>     
     </application>
-
+	
 </manifest>
