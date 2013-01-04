@@ -2,13 +2,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
-	android:background="@drawable/background2">
+	android:background="@drawable/gradient_box">
+
     <Button
+        
         android:id="@+id/btAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ADD" />
+        android:background="@drawable/add_btt" />
 
+    <Button
+        android:id="@+id/btUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/get_url" />
+
+    <ImageView
+        android:id="@+id/time"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sand_clock" />
+  
     <ListView
         android:id="@+id/listV_main"
         android:layout_width="fill_parent"

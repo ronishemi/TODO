@@ -11,25 +11,60 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int background1=0x7f020000;
-        public static final int background2=0x7f020001;
-        public static final int ic_action_search=0x7f020002;
-        public static final int icon=0x7f020003;
+        public static final int add_btt=0x7f020000;
+        public static final int background1=0x7f020001;
+        public static final int background2=0x7f020002;
+        public static final int done_btt=0x7f020003;
+        public static final int get_url=0x7f020004;
+        public static final int gradient_box=0x7f020005;
+        public static final int ic_action_search=0x7f020006;
+        public static final int icon=0x7f020007;
+        public static final int lightning=0x7f020008;
+        public static final int notifi=0x7f020009;
+        public static final int ok_btt=0x7f02000a;
+        public static final int reminder_btt=0x7f02000b;
+        public static final int sand_clock=0x7f02000c;
     }
     public static final class id {
-        public static final int btAdd=0x7f060004;
-        public static final int btDone=0x7f060003;
-        public static final int btnMessage=0x7f060001;
-        public static final int edit_message=0x7f060000;
-        public static final int listV_main=0x7f060005;
-        public static final int menu_settings=0x7f060006;
-        public static final int name=0x7f060002;
+        public static final int CancelDialog=0x7f06000b;
+        public static final int ControlButtons=0x7f060008;
+        public static final int Date=0x7f060005;
+        public static final int DateLayout=0x7f060011;
+        public static final int DatePicker=0x7f06000c;
+        public static final int DateTimeDialog=0x7f060006;
+        public static final int DateTimePicker=0x7f060007;
+        public static final int DateTimePickerVS=0x7f060010;
+        public static final int ResetDateTime=0x7f06000a;
+        public static final int SetDateTime=0x7f060009;
+        public static final int SwitchToDate=0x7f06000e;
+        public static final int SwitchToTime=0x7f06000f;
+        public static final int TimeLayout=0x7f060012;
+        public static final int TimePicker=0x7f060013;
+        public static final int ViewSwitchButtons=0x7f06000d;
+        public static final int btAdd=0x7f060016;
+        public static final int btDone=0x7f060015;
+        public static final int btUrl=0x7f060017;
+        public static final int btnMessage=0x7f060002;
+        public static final int btnReminder=0x7f060004;
+        public static final int edit_message=0x7f060001;
+        public static final int listV_main=0x7f060019;
+        public static final int menu_settings=0x7f06001b;
+        public static final int name=0x7f060014;
+        public static final int send=0x7f06001a;
+        public static final int tableRow1=0x7f060000;
+        public static final int tableRow2=0x7f060003;
+        public static final int time=0x7f060018;
     }
     public static final class layout {
         public static final int activity_task_list=0x7f030000;
-        public static final int item_details_view=0x7f030001;
-        public static final int item_details_view2=0x7f030002;
-        public static final int main=0x7f030003;
+        public static final int date_time_dialog=0x7f030001;
+        public static final int datepicker=0x7f030002;
+        public static final int datetimepicker=0x7f030003;
+        public static final int item_details_view=0x7f030004;
+        public static final int item_details_view2=0x7f030005;
+        public static final int main=0x7f030006;
+        public static final int notifier=0x7f030007;
+        public static final int timepicker=0x7f030008;
     }
     public static final class menu {
         public static final int activity_task_list=0x7f050000;
@@ -40,9 +75,12 @@ public final class R {
         public static final int app_name=0x7f040001;
         public static final int button_send=0x7f040005;
         public static final int edit_message=0x7f040004;
+        public static final int get_service=0x7f04000b;
+        public static final int get_url=0x7f04000a;
         public static final int hello=0x7f040000;
         public static final int hello_world=0x7f040006;
         public static final int menu_settings=0x7f040007;
+        public static final int sendNotifi=0x7f040009;
         public static final int title_activity_task_list=0x7f040008;
     }
 }
